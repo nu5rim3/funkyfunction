@@ -1,4 +1,11 @@
 import Marquee from 'react-fast-marquee'
+import { Bungee_Shade } from 'next/font/google'
+
+
+const bungee = Bungee_Shade({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 const Star = () => {
   return (
@@ -106,13 +113,27 @@ export default function Features() {
     text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque reiciendis ab similique expedita quaerat nesciunt.',
   }
 
-  const features = Array.from({ length: 6 }, () => ({ ...feature }))
+  const features = [
+    {
+      title: 'WagStaff',
+      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque reiciendis ab similique expedita quaerat nesciunt.',
+    },
+    {
+      title: 'Mammoth Store',
+      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque reiciendis ab similique expedita quaerat nesciunt.',
+    },
+    {
+      title: 'BookWormy',
+      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque reiciendis ab similique expedita quaerat nesciunt.',
+    },
+
+  ]
 
   return (
     <div>
       <section className="border-t-border dark:border-t-darkBorder dark:bg-darkBg border-t-2 bg-bg py-20 font-base lg:py-[100px]">
         <h2 className="mb-14 px-5 text-center text-2xl font-heading md:text-3xl lg:mb-20 lg:text-4xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing
+          Projects that we have worked on
         </h2>
 
         <div className="mx-auto grid w-container max-w-full grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -121,13 +142,13 @@ export default function Features() {
 
             return (
               <div
-                className="border-border dark:border-darkBorder dark:bg-darkBg shadow-light dark:shadow-dark flex flex-col gap-3 rounded-base border-2 bg-white p-5"
+                className="border-border dark:border-darkBorder dark:bg-darkBg shadow-light dark:shadow-dark flex flex-col gap-3 rounded-base border-2 bg-white p-5 hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:hover:shadow-none"
                 key={i}
               >
                 <Icon />
 
                 <h4 className="mt-2 text-xl font-heading">
-                  {feature.title} {i + 1}
+                  {feature.title}
                 </h4>
                 <p>{feature.text}</p>
               </div>
@@ -145,8 +166,8 @@ export default function Features() {
             .map((x, id) => {
               return (
                 <div className="flex items-center" key={id}>
-                  <span className="mx-10 text-xl font-heading sm:text-2xl lg:text-4xl">
-                    Neobrutalism components
+                  <span className={`mx-10 text-xl font-heading sm:text-2xl lg:text-4xl ${bungee.className}`}>
+                    f()
                   </span>
                   <Star3 />
                 </div>

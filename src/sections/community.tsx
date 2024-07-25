@@ -25,7 +25,7 @@ export default function Community() {
             <div className="group flex flex-col justify-center" key={index}>
               {card.map(({ jobTitle, pfp, fullName, review }, index) => (
                 <div
-                  className="border-border dark:border-darkBorder shadow-light dark:shadow-dark dark:bg-darkBg mb-4 min-h-48 w-full rounded-base border-2 bg-bg p-5 lg:mb-8 w900:mx-auto w900:min-h-20 w900:w-2/3 w500:w-full"
+                  className="border-border dark:border-darkBorder shadow-light dark:shadow-dark dark:bg-darkBg mb-4 min-h-48 w-full rounded-base border-2 bg-bg p-5 lg:mb-8 w900:mx-auto w900:min-h-20 w900:w-2/3 w500:w-full hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
                   key={index}
                 >
                   <div className="flex items-center gap-5">

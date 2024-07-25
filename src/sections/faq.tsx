@@ -5,6 +5,13 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import Marquee from 'react-fast-marquee'
+import { Bungee_Shade } from 'next/font/google'
+
+
+const bungee = Bungee_Shade({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 const Star3 = () => {
   return (
@@ -33,35 +40,39 @@ export default function Faq() {
         <div className="mx-auto grid w-[700px] max-w-full px-5">
           <Accordion className="text-base sm:text-lg" type="single" collapsible>
             <AccordionItem className="mb-2" value="item-1">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>What services does your company offer?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                We offer a wide range of software development services, including web and mobile application development, custom software solutions, UI/UX design, software maintenance and support, and cloud computing services.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem className="mb-2" value="item-2">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>What industries do you specialize in?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                Our team has extensive experience in various industries, including healthcare, finance, education, e-commerce, and more. We tailor our solutions to meet the unique needs of each sector.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem className="mb-2" value="item-3">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>How do I get started with your services?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                You can get started by contacting us through our website&apos;s contact form or calling us directly. We&apos;ll arrange an initial consultation to understand your requirements and discuss how we can help.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+            <AccordionItem className="mb-2" value="item-4">
+              <AccordionTrigger>What technologies do you use for development?</AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                We use a wide range of technologies, including but not limited to JavaScript (React, Node.js, Angular), Python, Java, .NET, PHP, Swift, Kotlin, AWS, Azure, and more. We select the best tools and technologies to fit your project requirements.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem className="mb-2" value="item-5">
+              <AccordionTrigger>Do you develop mobile applications for both iOS and Android?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we develop mobile applications for both iOS and Android platforms. Our team is proficient in native development as well as cross-platform frameworks like React Native and Flutter.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6">
+              <AccordionTrigger>How do you handle scalability in your software solutions?</AccordionTrigger>
+              <AccordionContent>
+                We design our software solutions with scalability in mind, ensuring they can grow and adapt to increased user demands and business needs. Our architects employ scalable designs and cloud solutions to handle varying loads effectively.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -77,8 +88,8 @@ export default function Faq() {
             .map((x, id) => {
               return (
                 <div className="flex items-center" key={id}>
-                  <span className="mx-10 text-xl font-heading sm:text-2xl lg:text-4xl">
-                    Neobrutalism components
+                  <span className={`mx-10 text-xl font-heading sm:text-2xl lg:text-4xl ${bungee.className}`}>
+                    f()
                   </span>
                   <Star3 />
                 </div>
