@@ -89,7 +89,7 @@ export default function Faq() {
               return (
                 <div className="flex items-center" key={id}>
                   <span className={`mx-10 text-xl font-heading sm:text-2xl lg:text-4xl ${bungee.className}`}>
-                    f()
+                    f();
                   </span>
                   <Star3 />
                 </div>
